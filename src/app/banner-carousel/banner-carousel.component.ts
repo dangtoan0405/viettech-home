@@ -24,22 +24,22 @@ export class BannerCarouselComponent
   implements OnInit, AfterViewInit, OnDestroy {
   @Input() delayTime = 5000;
   dataSource: BannerModel[] = [
-    {
-      imageUrl: 'assets/images/erp.png',
-      link: '',
-    },
-    {
-      imageUrl: 'assets/images/solution.png',
-      link: '',
-    },
-    {
-      imageUrl: 'assets/images/mobile.png',
-      link: '',
-    },
-    {
-      imageUrl: 'assets/images/marketing.png',
-      link: '',
-    },
+    // {
+    //   imageUrl: 'assets/images/erp.png',
+    //   link: '',
+    // },
+    // {
+    //   imageUrl: 'assets/images/solution.png',
+    //   link: '',
+    // },
+    // {
+    //   imageUrl: 'assets/images/mobile.png',
+    //   link: '',
+    // },
+    // {
+    //   imageUrl: 'assets/images/marketing.png',
+    //   link: '',
+    // },
   ];
   public startIndex = 0;
   private setTimeOut;

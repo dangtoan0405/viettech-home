@@ -4,143 +4,116 @@
   <app-banner-carousel></app-banner-carousel>
 </div>
 <div class="main__container container__max-width">
-  <div class="display__flex" id="targetView">
-    <ul class="circle-container">
-      <li>
-        <img
-          src="http://lorempixel.com/100/100/city"
-          alt="..."
-          (click)="selectItem('1')"
-          [class.active]="itemSelected === '1'"
-        />
-      </li>
-      <li>
-        <img
-          src="http://lorempixel.com/100/100/nature"
-          alt="..."
-          (click)="selectItem('2')"
-          [class.active]="itemSelected === '2'"
-        />
-      </li>
-      <li>
-        <img
-          src="http://lorempixel.com/100/100/abstract"
-          alt="..."
-          (click)="selectItem('3')"
-          [class.active]="itemSelected === '3'"
-        />
-      </li>
-      <li>
-        <img
-          src="http://lorempixel.com/100/100/cats"
-          alt="..."
-          (click)="selectItem('4')"
-          [class.active]="itemSelected === '4'"
-        />
-      </li>
-      <li>
-        <img
-          src="http://lorempixel.com/100/100/food"
-          alt="..."
-          (click)="selectItem('5')"
-          [class.active]="itemSelected === '5'"
-        />
-      </li>
-      <li>
-        <img
-          src="http://lorempixel.com/100/100/animals"
-          alt="..."
-          (click)="selectItem('6')"
-          [class.active]="itemSelected === '6'"
-        />
-      </li>
-    </ul>
-    <div class="info-erp">
-      <ng-container *ngIf="itemSelected === '1' || itemSelected === ''">
-        <p class="detail-title">TỔNG QUAN</p>
-        <div class="detail-text">
-          <p>
-            Công ty Cổ Phần Công Nghệ VietTech chuyên cung cấp các giải pháp và
-            các ứng dụng CNTT vào việc quản lý, quản trị doanh nghiệp. Bên cạnh
-            đó VietTech còn thực hiện gia công phần mềm cho các đối tác khu vực
-            Bắc Mỹ và Châu Á Thái Bình Dương.
-          </p>
-
-          <p>
-            Về con người, VietTech luôn tập trung cho mục tiêu "đáp ứng - thoả
-            mãn nhu cầu của khách hàng" để từ đó tạo ra giá trị, qua đó giúp cho
-            việc gắn kết VietTech với đối tác nói chung và các thành viên của
-            VietTech nói riêng.
-          </p>
-          <p>
-            Về môi trường làm việc, VietTech hướng đến một trường thân thiện,
-            cởi mở, sáng tạo và hiệu quả nhằm tạo ra và mang giá trị cao nhất
-            cho khách hàng, đối tác
-          </p>
-        </div>
-      </ng-container>
-
-      <ng-container *ngIf="itemSelected === '2'">
-        <p class="detail-title">GIẢI PHÁP CHO DOANH NGHIỆP</p>
-        <div class="detail-text">
-          <ul>
-            <li>Cung cấp giải pháp, ứng dụng CNTT cho Doanh Nghiệp</li>
-            <li>Thiết kế phần mềm theo yêu cầu đặc thù của Doanh Nghiệp</li>
-            <li>Tư vấn, xây dựng bộ nhận dạng thương hiệu</li>
-            <li>Triển khai giải pháp eCommerce, Social/Digital Marketing</li>
-            <li>Tư vấn, thiết kế, thi công hạ tầng và hệ thống CNTT</li>
-          </ul>
-        </div>
-      </ng-container>
-
-      <ng-container *ngIf="itemSelected === '3'">
-        <p class="detail-title">GIẢI PHÁP CHO MARKETING</p>
-        <div class="detail-text">
-          <ul>
-            <li>Giải pháp marketing thông qua Facebook, Google, Youtube...</li>
-            <li>Cá nhân hoá marketing bằng giải pháp Mobile Marketing</li>
-            <li>Dịch vụ SMS Marketing và Email Marketing</li>
-            <li>Thiết kế Wesite, xây dựng bộ nhận dạng thương hiệu</li>
-            <li>Tư vấn giải pháp và xây dựng chiến lược Marketing</li>
-          </ul>
-        </div>
-      </ng-container>
-
-      <ng-container *ngIf="itemSelected === '4'">
-        <p class="detail-title">GIẢI PHÁP CHO WEBSITE</p>
-        <div class="detail-text">
-          <ul>
-            <li>Gia công và thiết kế ứng dụng Website theo yêu cầu</li>
-            <li>Giải pháp Website marketing cho doanh nghiệp</li>
-            <li>Thiết kế, gia công Website</li>
-            <li>Giải pháp tích hợp hệ thống quản lý trên Website</li>
-          </ul>
-        </div>
-      </ng-container>
-
-      <ng-container *ngIf="itemSelected === '5'">
-        <p class="detail-title">GIẢI PHÁP CHO MOBILE</p>
-        <div class="detail-text">
-          <ul>
-            <li>Gia công và thiết kế ứng dụng Mobile theo yêu cầu</li>
-            <li>Giải pháp Mobile marketing cho doanh nghiệp</li>
-            <li>Thiết kế, gia công Mobile Game</li>
-            <li>Giải pháp tích hợp hệ thống quản lý trên Mobile</li>
-          </ul>
-        </div>
-      </ng-container>
-
-      <ng-container *ngIf="itemSelected === '6'">
-        <p class="detail-title">THÔNG TIN LIÊN HỆ</p>
-        <div class="detail-text">
-          <div>
-            <p>371/1/125 Lý Thường Kiệt, Tân Bình, T.p Hồ Chí Minh</p>
-            <p>Điện thoại: (+84) 999 888 777</p>
-            <p>Di động: (+84) 999 888 777</p>
-          </div>
-        </div>
-      </ng-container>
+  <div class="block__icon-erp">
+    <div>
+      <img
+        class="icon-erp"
+        src="assets/images/icon-erp.png"
+        alt=""
+        (click)="selectItem('1')"
+      />
+    </div>
+    <div>
+      <img
+        class="icon-erp"
+        src="assets/images/icon-erp.png"
+        alt=""
+        (click)="selectItem('2')"
+      />
+    </div>
+    <div>
+      <img
+        class="icon-erp"
+        src="assets/images/icon-erp.png"
+        alt=""
+        (click)="selectItem('3')"
+      />
+    </div>
+    <div>
+      <img class="icon-erp" src="assets/images/icon-erp.png" alt="" (click)="selectItem('4')"/>
+    </div>
+    <div>
+      <img class="icon-erp" src="assets/images/icon-erp.png" alt="" />
     </div>
   </div>
 </div>
-<!-- <app-footer></app-footer> -->
+
+<div class="detail-erp container__max-width item" *ngIf="itemSelected == '1'">
+  <div class="block__detail block__viettech" data-aos="fade-up">
+    <div class="img-erp">
+      <img src="assets/images/erp.png" alt="" />
+    </div>
+    <div class="info-text">
+      <p class="title">Title item 1</p>
+      <p class="description">
+        Detail: VietTech specializes in providing software solutions and
+        products based on IoT platform. Combined with hardware devices for
+        monitoring, measurement and data logger, VietTech has been building its
+        own specific ERP system with a team of experienced experts and employees
+        who understand the market. VietTech is steadily developing and becoming
+        a big and reputable company in the field of IoT application with ERP
+        software system.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail-erp container__max-width item" *ngIf="itemSelected == '2'">
+  <div class="block__detail block__viettech" data-aos="fade-down">
+    <div class="img-erp">
+      <img src="assets/images/erp.png" alt="" />
+    </div>
+    <div class="info-text">
+      <p class="title">Title item 2 (always show)</p>
+      <p class="description">
+        Detail: VietTech specializes in providing software solutions and
+        products based on IoT platform. Combined with hardware devices for
+        monitoring, measurement and data logger, VietTech has been building its
+        own specific ERP system with a team of experienced experts and employees
+        who understand the market. VietTech is steadily developing and becoming
+        a big and reputable company in the field of IoT application with ERP
+        software system.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail-erp container__max-width item" *ngIf="itemSelected == '3'">
+  <div class="block__detail block__viettech" data-aos="flip-left">
+    <div class="img-erp">
+      <img src="assets/images/erp.png" alt="" />
+    </div>
+    <div class="info-text">
+      <p class="title">Title item 3</p>
+      <p class="description">
+        Detail: VietTech specializes in providing software solutions and
+        products based on IoT platform. Combined with hardware devices for
+        monitoring, measurement and data logger, VietTech has been building its
+        own specific ERP system with a team of experienced experts and employees
+        who understand the market. VietTech is steadily developing and becoming
+        a big and reputable company in the field of IoT application with ERP
+        software system.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail-erp container__max-width item" *ngIf="itemSelected == '4'">
+  <div class="block__detail block__viettech" data-aos="flip-right">
+    <div class="img-erp">
+      <img src="assets/images/erp.png" alt="" />
+    </div>
+    <div class="info-text">
+      <p class="title">Title item 4</p>
+      <p class="description">
+        Detail: VietTech specializes in providing software solutions and
+        products based on IoT platform. Combined with hardware devices for
+        monitoring, measurement and data logger, VietTech has been building its
+        own specific ERP system with a team of experienced experts and employees
+        who understand the market. VietTech is steadily developing and becoming
+        a big and reputable company in the field of IoT application with ERP
+        software system.
+      </p>
+    </div>
+  </div>
+</div>

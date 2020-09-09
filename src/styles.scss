@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 * {
   font-family: "Open Sans", sans-serif !important;
 }
@@ -16,12 +17,15 @@ body {
 */
 .nav-bar-container {
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   height: 80px;
-  background-color: #e0e0e0;
+  background-color: #fff;
   top: 0;
   left: 0;
   width: 100vw;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   .container__max-width {
     height: 100%;
     .block-item-erp {
@@ -30,6 +34,7 @@ body {
       height: 100%;
       text-align: center;
       align-items: center;
+
       float: left;
       .item-erp {
         display: block;
@@ -91,40 +96,6 @@ body {
 /*
     Container
 */
-
-.main__container {
-  padding-top: 80px;
-
-  .display__flex {
-    display: flex;
-    .info-erp {
-      position: relative;
-      margin: 50px;
-      width: calc(100% - 25em);
-      ul {
-        li {
-          list-style: none;
-          background: url("assets/images/check.png") no-repeat left center;
-          padding-left: 26px;
-          margin: 10px 0;
-        }
-      }
-      p {
-        padding-left: 40px;
-      }
-
-      .detail-title {
-        font-size: 24px;
-        color: tomato;
-        font-weight: 700;
-      }
-
-      .detail-text {
-        font-size: 16px;
-      }
-    }
-  }
-}
 
 .text-caption {
   ul {
