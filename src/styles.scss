@@ -1,0 +1,218 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.container__max-width {
+  max-width: 1280px;
+  margin: auto;
+}
+
+body {
+  margin: 0 !important;
+}
+/* 
+    Navbar
+*/
+.nav-bar-container {
+  position: fixed;
+  z-index: 1000;
+  height: 80px;
+  background-color: #e0e0e0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  .container__max-width {
+    height: 100%;
+    .block-item-erp {
+      text-transform: uppercase;
+      display: inline-flex;
+      height: 100%;
+      text-align: center;
+      align-items: center;
+      float: left;
+      .item-erp {
+        display: block;
+        padding: 0 20px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        color: #2672b4;
+        &::after {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          background-color: tomato;
+          -webkit-transition: 0.2s all;
+          transition: 0.2s all;
+        }
+        &:hover {
+          color: tomato;
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: tomato;
+            -webkit-transition: 0.2s all;
+            transition: 0.2s all;
+          }
+        }
+
+        &.active {
+          color: tomato;
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: tomato;
+            -webkit-transition: 0.2s all;
+            transition: 0.2s all;
+          }
+        }
+      }
+    }
+
+    .block-logo {
+      float: right;
+      background-image: url("./assets/images/logo-viettech.png");
+      width: 200px;
+      height: 100%;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      background-position: center;
+    }
+  }
+}
+
+/*
+    Container
+*/
+
+.main__container {
+  padding-top: 80px;
+
+  .display__flex {
+    display: flex;
+    .info-erp {
+      position: relative;
+      margin: 50px;
+      width: calc(100% - 25em);
+      ul {
+        li {
+          list-style: none;
+          background: url("assets/images/check.png") no-repeat left center;
+          padding-left: 26px;
+          margin: 10px 0;
+        }
+      }
+      p {
+        padding-left: 40px;
+      }
+
+      .detail-title {
+        font-size: 24px;
+        color: tomato;
+        font-weight: 700;
+      }
+
+      .detail-text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.text-caption {
+  ul {
+    list-style-type: none;
+  }
+  li {
+    background: url("assets/images/bullet.png") no-repeat left center;
+    padding-left: 19px;
+    text-align: left;
+    font-weight: 300;
+    font-size: 24px;
+    color: #fff;
+  }
+}
+
+@import "~compass-mixins/lib/compass/css3";
+
+/// Mixin to place items on a circle
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -($item-size / 2);
+    width: $item-size;
+    height: $item-size;
+
+    $angle: (360 / $item-count);
+    $rot: 180;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg)
+          translate($circle-size / 2)
+          rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+.circle-container {
+  @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 6em);
+  border: solid 5px tomato;
+  margin: 50px;
+
+  img {
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+    filter: grayscale(80%);
+    border: solid 5px tomato;
+    transition: 0.15s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+    &.active {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.detail-text {
+  position: absolute;
+  width: 100%;
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+@keyframes move-right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}

@@ -1,0 +1,39 @@
+<div
+  class="slideshow-container"
+  [ngStyle]="{
+    'background-image': 'url(assets/images/bg-banner.png)'
+  }"
+>
+  <div class="caption container__max-width">
+    <div class="logo">
+      <img src="assets/images/logo-viettech.png" alt="" />
+    </div>
+    <div class="banner-cation">
+      <img src="assets/images/caption1.png" alt="" />
+    </div>
+    <div class="text-caption">
+      <ul>
+        <li>Giải pháp phần mềm Quản Trị Doanh Nghiệp</li>
+        <li>Thiết kế website, gia công ứng dụng mobile iOS, Android</li>
+        <li>Social/Digital Marketing, eCommerce, Multimedia</li>
+      </ul>
+    </div>
+  </div>
+  <div
+    *ngFor="let item of dataSource; let i = index"
+    class="mySlides fade img-banner container__max-width"
+    [id]="'idCheck' + i"
+    [ngStyle]="{
+      display: startIndex === i + 1 ? 'block' : 'none',
+      'background-image': 'url(' + item.imageUrl + ')'
+    }"
+  ></div>
+</div>
+<div class="carousel-dot">
+  <span
+    *ngFor="let item of dataSource; let i = index"
+    [class.active]="startIndex === i + 1"
+    (click)="clickDotVer2(i)"
+    class="dot"
+  ></span>
+</div>
