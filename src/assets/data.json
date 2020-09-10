@@ -1,0 +1,77 @@
+{
+    "itemERP": [
+        {
+            "id": "1",
+            "title": "Title Item 1",
+            "description": "VietTech specializes in providing software solutions and products based on IoT platform.",
+            "float": "fade-up",
+            "detail": [
+                {
+                    "id": "detail-1-1",
+                    "title": "Detail Item Lvl 1.1",
+                    "description": "VietTech specializes in providing software solutions and products based on IoT platform. Combined with hardware devices for monitoring, measurement and data logger, VietTech has been building its own specific ERP system with a team of experienced experts and employees who understand the market. VietTech is steadily developing and becoming a big and reputable company in the field of IoT application with ERP software system."
+                },
+                {
+                    "id": "detail-1-2",
+                    "title": "Detail Item Lvl 1.2",
+                    "description": "VietTech specializes in providing software solutions and products based on IoT platform.",
+                    "detail": [
+                        {
+                            "id": "detail-1-2-1",
+                            "title": "Detail Item Lvl 1.2.1",
+                            "description": "VietTech specializes in providing software solutions and products based on IoT platform."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Title Item 2",
+            "float": "fade-up",
+            "detail": [
+                {
+                    "id": "detail-2-1",
+                    "title": "Detail Item Lvl 2.1",
+                    "description": "VietTech specializes in providing software solutions and products based on IoT platform. Combined with hardware devices for monitoring, measurement and data logger, VietTech has been building its own specific ERP system with a team of experienced experts and employees who understand the market. VietTech is steadily developing and becoming a big and reputable company in the field of IoT application with ERP software system."
+                },
+                {
+                    "id": "detail-2-2",
+                    "title": "Detail Item Lvl 2.2",
+                    "description": "VietTech specializes in providing software solutions and products based on IoT platform.",
+                    "detail": [
+                        {
+                            "id": "detail-2-2-1",
+                            "title": "Detail Item Lvl 2.2.1",
+                            "description": "VietTech specializes in providing software solutions and products based on IoT platform."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Title Item 3",
+            "float": "fade-up",
+            "detail": [
+                {
+                    "id": "detai3-1-1",
+                    "title": "Detail Item Lvl 3.1",
+                    "description": "VietTech specializes in providing software solutions and products based on IoT platform. Combined with hardware devices for monitoring, measurement and data logger, VietTech has been building its own specific ERP system with a team of experienced experts and employees who understand the market. VietTech is steadily developing and becoming a big and reputable company in the field of IoT application with ERP software system."
+                },
+                {
+                    "id": "detail-3-2",
+                    "title": "Detail Item Lvl 3.2",
+                    "description": "VietTech specializes in providing software solutions and products based on IoT platform.",
+                    "detail": [
+                        {
+                            "id": "detail-3-2-1",
+                            "title": "Detail Item Lvl 3.2.1",
+                            "description": "VietTech specializes in providing software solutions and products based on IoT platform."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
