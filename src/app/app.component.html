@@ -38,7 +38,12 @@
       />
     </div>
     <div>
-      <img class="icon-erp" src="assets/images/icon-erp.png" alt="" />
+      <img
+        class="icon-erp"
+        src="assets/images/icon-erp.png"
+        alt=""
+        (click)="selectItem('5')"
+      />
     </div>
   </div>
 </div>
@@ -46,6 +51,7 @@
 <ng-container *ngFor="let item of itemERP">
   <div
     class="detail-erp container__max-width item"
+    [id]="'item-erp-' + item.id"
     *ngIf="itemSelected === item.id"
   >
     <div
@@ -89,14 +95,14 @@
         </ng-template>
 
         <ng-container
-          *ngTemplateOutlet="recursiveList; context: { $implicit: itemERP }"
+          *ngTemplateOutlet="recursiveList; context: { $implicit: item.detail }"
         ></ng-container>
       </div>
     </div>
   </div>
 </ng-container>
 
-<div class="detail-erp container__max-width item" *ngIf="itemSelected == '1'">
+<!-- <div class="detail-erp container__max-width item" *ngIf="itemSelected == '1'">
   <div class="block__detail block__viettech" data-aos="fade-up">
     <div class="img-erp">
       <img src="assets/images/erp.png" alt="" />
@@ -114,4 +120,4 @@
       </p>
     </div>
   </div>
-</div>
+</div> -->

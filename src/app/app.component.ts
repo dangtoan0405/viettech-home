@@ -40,8 +40,13 @@ export class AppComponent implements OnInit {
   }
 
   gotoTop() {
-    // const el = document.getElementById('targetView');
-    // el.scrollIntoView();
+    setTimeout(() => {
+      const el = document.getElementById('item-erp-' + this.itemSelected);
+      if (!el) {
+        return;
+      }
+      el.scrollIntoView();
+    }, 500);
   }
 
   collapseDescription(elementId) {
