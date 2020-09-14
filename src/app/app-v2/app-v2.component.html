@@ -1,0 +1,50 @@
+<div class="container__max-width">
+  <div
+    *ngFor="let item of itemERP"
+    class="block__container-v2"
+    [attr.data-aos]="item.float"
+    [id]="'item-erp-' + item.id"
+  >
+    <div class="main-title">
+      <p class="title-text">{{ item.title }}</p>
+      <p class="description-text">{{ item.description }}</p>
+    </div>
+    <div class="main-left" [id]="item.id">
+      <div *ngFor="let itemDetailLvl of item.detail">
+        <p class="title-sub-left">{{ itemDetailLvl.title }}</p>
+      </div>
+    </div>
+    <div class="main-right">
+      <ng-template #recursiveList let-list>
+        <li *ngFor="let item of list">
+          <p
+            class="description-title"
+            [id]="item.id + '-description-title'"
+            (click)="collapseDescription(item.id)"
+          >
+            {{ item.title }}
+          </p>
+          <div
+            class="description-text"
+            [id]="item.id + '-description'"
+            *ngIf="item.description"
+          >
+            {{ item.description }}
+          </div>
+          <ul *ngIf="item.detail && item.detail.length > 0">
+            <ng-container
+              *ngTemplateOutlet="
+                recursiveList;
+                context: { $implicit: item.detail }
+              "
+            ></ng-container>
+          </ul>
+        </li>
+      </ng-template>
+
+      <ng-container
+        *ngTemplateOutlet="recursiveList; context: { $implicit: item.detail }"
+      ></ng-container>
+    </div>
+  </div>
+</div>

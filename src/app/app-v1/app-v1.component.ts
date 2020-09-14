@@ -1,37 +1,20 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import * as AOS from 'aos';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, Input } from '@angular/core';
 import { ItemERP } from 'src/model/item-erp';
 import { DataService } from 'src/service/data.service';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-app-v1',
+  templateUrl: './app-v1.component.html',
+  styleUrls: ['./app-v1.component.scss'],
 })
-export class AppComponent implements OnInit {
-  title = 'home-viettech';
+export class AppV1Component implements OnInit {
   itemSelected = '1';
   itemERP: ItemERP[] = [];
-  constructor(
-    private translateService: TranslateService,
-    private dataService: DataService
-  ) {
-    this.translateService.setDefaultLang('vn');
-    this.getDataJSONFile();
-  }
+  constructor(private dataService: DataService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getItemSelected();
-    AOS.init({
-      duration: 2000,
-    });
-    this.selectItem('1');
-  }
-
-  public selectItem(id: string) {
-    this.itemSelected = id;
-    this.dataService.updateItemSelected(id);
+    this.getDataJSONFile();
   }
 
   getItemSelected() {

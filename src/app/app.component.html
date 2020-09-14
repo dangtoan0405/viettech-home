@@ -1,5 +1,4 @@
-<app-nav-bar [(itemSelected)]="itemSelected" (itemSelectedChange)="gotoTop()">
-</app-nav-bar>
+<app-nav-bar> </app-nav-bar>
 <div style="position: relative; padding-top: 80px">
   <app-banner-carousel></app-banner-carousel>
 </div>
@@ -8,6 +7,7 @@
     <div>
       <img
         class="icon-erp"
+        [class.active]="itemSelected === '1'"
         src="assets/images/icon-erp.png"
         alt=""
         (click)="selectItem('1')"
@@ -16,6 +16,7 @@
     <div>
       <img
         class="icon-erp"
+        [class.active]="itemSelected === '2'"
         src="assets/images/icon-erp.png"
         alt=""
         (click)="selectItem('2')"
@@ -24,6 +25,7 @@
     <div>
       <img
         class="icon-erp"
+        [class.active]="itemSelected === '3'"
         src="assets/images/icon-erp.png"
         alt=""
         (click)="selectItem('3')"
@@ -32,6 +34,7 @@
     <div>
       <img
         class="icon-erp"
+        [class.active]="itemSelected === '4'"
         src="assets/images/icon-erp.png"
         alt=""
         (click)="selectItem('4')"
@@ -40,6 +43,7 @@
     <div>
       <img
         class="icon-erp"
+        [class.active]="itemSelected === '5'"
         src="assets/images/icon-erp.png"
         alt=""
         (click)="selectItem('5')"
@@ -48,76 +52,4 @@
   </div>
 </div>
 
-<ng-container *ngFor="let item of itemERP">
-  <div
-    class="detail-erp container__max-width item"
-    [id]="'item-erp-' + item.id"
-    *ngIf="itemSelected === item.id"
-  >
-    <div
-      class="block__detail block__viettech"
-      [attr.data-aos]="item.float ? item.float : 'fade-up'"
-    >
-      <div class="img-erp">
-        <img src="assets/images/erp.png" alt="" />
-      </div>
-      <div class="info-text">
-        <p class="title">{{ item.title }}</p>
-        <p class="description">
-          {{ item.description }}
-        </p>
-
-        <ng-template #recursiveList let-list>
-          <li *ngFor="let item of list">
-            <p
-              class="description-title"
-              [id]="item.id + '-description-title'"
-              (click)="collapseDescription(item.id)"
-            >
-              {{ item.title }}
-            </p>
-            <div
-              class="description-text"
-              [id]="item.id + '-description'"
-              *ngIf="item.description"
-            >
-              {{ item.description }}
-            </div>
-            <ul *ngIf="item.detail && item.detail.length > 0">
-              <ng-container
-                *ngTemplateOutlet="
-                  recursiveList;
-                  context: { $implicit: item.detail }
-                "
-              ></ng-container>
-            </ul>
-          </li>
-        </ng-template>
-
-        <ng-container
-          *ngTemplateOutlet="recursiveList; context: { $implicit: item.detail }"
-        ></ng-container>
-      </div>
-    </div>
-  </div>
-</ng-container>
-
-<!-- <div class="detail-erp container__max-width item" *ngIf="itemSelected == '1'">
-  <div class="block__detail block__viettech" data-aos="fade-up">
-    <div class="img-erp">
-      <img src="assets/images/erp.png" alt="" />
-    </div>
-    <div class="info-text">
-      <p class="title">Title item 1</p>
-      <p class="description">
-        Detail: VietTech specializes in providing software solutions and
-        products based on IoT platform. Combined with hardware devices for
-        monitoring, measurement and data logger, VietTech has been building its
-        own specific ERP system with a team of experienced experts and employees
-        who understand the market. VietTech is steadily developing and becoming
-        a big and reputable company in the field of IoT application with ERP
-        software system.
-      </p>
-    </div>
-  </div>
-</div> -->
+<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DataService } from 'src/service/data.service';
 export interface ERPDetail {
   id: string;
   value: string;
@@ -51,12 +52,19 @@ export class NavBarComponent implements OnInit {
       textStrong: 'VietTech',
     },
   ];
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getItemSelected();
+  }
+
+  getItemSelected() {
+    this.dataService.getItemSelectedAsObservable().subscribe((res) => {
+      this.itemSelected = res;
+    });
+  }
 
   selectItem(id: string) {
-    this.itemSelected = id;
-    this.itemSelectedChange.emit(id);
+    this.dataService.updateItemSelected(id);
   }
 }
