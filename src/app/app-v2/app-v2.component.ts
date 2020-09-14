@@ -1,7 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostListener,
+  AfterViewInit,
+  AfterContentChecked,
+  AfterViewChecked,
+} from '@angular/core';
 import { ItemERP } from 'src/model/item-erp';
 import { DataService } from 'src/service/data.service';
-
+import { BehaviorSubject } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 @Component({
   selector: 'app-app-v2',
   templateUrl: './app-v2.component.html',
@@ -10,11 +18,33 @@ import { DataService } from 'src/service/data.service';
 export class AppV2Component implements OnInit {
   itemSelected = '1';
   itemERP: ItemERP[] = [];
+  positionItemERP: number[] = [0];
+  scrollChange$ = new BehaviorSubject<number>(0);
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.getItemSelected();
     this.getDataJSONFile();
+    this.scrollChange$.pipe(debounceTime(200)).subscribe((position) => {
+      console.log('AppV2Component -> ngOnInit -> position', position);
+      if (position < this.positionItemERP[0] && position < 200) {
+        this.dataService.updateItemSelected('', false);
+        return;
+      }
+      this.getPositionElement();
+      const indexPosition: any = this.positionItemERP.findIndex(
+        (elt) => elt > position - 100
+      );
+      this.dataService.updateItemSelected(
+        this.itemERP[indexPosition].id,
+        false
+      );
+    });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkOffsetTop() {
+    this.scrollChange$.next(window.pageYOffset);
   }
 
   getItemSelected() {
@@ -27,7 +57,6 @@ export class AppV2Component implements OnInit {
     this.dataService
       .getDataJSONFile()
       .subscribe((res: { itemERP: ItemERP[] }) => {
-        console.log('AppV1Component -> getDataJSONFile -> res', res);
         this.itemERP = res.itemERP;
       });
   }
@@ -48,5 +77,16 @@ export class AppV2Component implements OnInit {
         elParent.classList.remove('active-down');
       }
     }
+  }
+
+  getPositionElement() {
+    if (this.positionItemERP.length > 1 || this.itemERP.length === 0) {
+      return;
+    }
+    this.positionItemERP = [];
+    this.itemERP.forEach((item) => {
+      const el = document.getElementById('item-erp-' + item.id) as HTMLElement;
+      this.positionItemERP.push(el.offsetTop);
+    });
   }
 }

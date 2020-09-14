@@ -1,4 +1,8 @@
 .block__icon-erp {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 30px;
   width: max-content;
   margin: auto;
   display: flex;
@@ -12,7 +16,7 @@
     cursor: pointer;
     width: 100px;
     height: 100px;
-    margin: 0 10px;
+    margin: 2px 30px;
     padding: 10px;
     border-radius: 15px;
     &:hover {
@@ -24,8 +28,11 @@
       -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+      border: 2px solid #62c7f5;
+      margin: 0 28px;
     }
   }
+ 
 }
 
 ul,
@@ -33,11 +40,6 @@ li {
   list-style-type: none;
 }
 
-.main__container {
-  position: relative;
-  z-index: 1;
-  margin-top: -90px;
-}
 .block__detail {
   display: flex;
   position: relative;

@@ -3,10 +3,21 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 15px 0;
-  border: 2px solid #62c7f5;
+  border: 1px solid #bceaff;
+
   border-top: none;
   border-bottom: none;
   border-radius: 15px;
+  &.active {
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    border: 2px solid #62c7f5;
+  }
+  &.last-child {
+    margin-bottom: 250px;
+  }
+
   .main-title {
     width: 100%;
     p {

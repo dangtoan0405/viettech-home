@@ -11,7 +11,7 @@ import { DataService } from 'src/service/data.service';
 })
 export class AppComponent implements OnInit {
   title = 'home-viettech';
-  itemSelected = '1';
+  itemSelected = '';
   itemERP: ItemERP[] = [];
   constructor(
     private translateService: TranslateService,
@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
     AOS.init({
       duration: 2000,
     });
-    this.selectItem('1');
   }
 
   public selectItem(id: string) {

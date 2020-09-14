@@ -79,7 +79,7 @@
             "id": "4",
             "title": "Title Item 4",
             "description": "VietTech Item 4",
-            "float": "fade-up",
+            "float": "flip-down",
             "detail": [
                 {
                     "id": "detai4-1",
@@ -104,7 +104,7 @@
             "id": "5",
             "title": "Title Item 5",
             "description": "VietTech Item 5",
-            "float": "fade-up",
+            "float": "flip-up",
             "detail": [
                 {
                     "id": "detai5-1",

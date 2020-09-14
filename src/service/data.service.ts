@@ -14,9 +14,12 @@ export class DataService {
     return this.http.get('assets/data.json');
   }
 
-  updateItemSelected(itemId: string) {
+  updateItemSelected(itemId: string, scrollToView: boolean = true) {
+    console.log('DataService -> updateItemSelected -> itemId', itemId);
     this.itemSelected.next(itemId);
-    this.scrollIntoViewItemSelected();
+    if (scrollToView) {
+      this.scrollIntoViewItemSelected();
+    }
   }
 
   getItemSelectedAsObservable() {

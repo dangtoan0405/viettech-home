@@ -97,6 +97,12 @@ body {
     Container
 */
 
+.main__container {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+
 .text-caption {
   ul {
     list-style-type: none;

@@ -1,7 +1,9 @@
 <div class="container__max-width">
   <div
-    *ngFor="let item of itemERP"
+    *ngFor="let item of itemERP; let last = last"
     class="block__container-v2"
+    [class.active]="itemSelected === item.id"
+    [class.last-child]="last"
     [attr.data-aos]="item.float"
     [id]="'item-erp-' + item.id"
   >

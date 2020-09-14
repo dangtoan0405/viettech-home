@@ -12,7 +12,7 @@ export interface ERPDetail {
   styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
-  @Input() itemSelected: string;
+  @Input() itemSelected = '';
   @Output() itemSelectedChange = new EventEmitter<string>();
   public listErp: ERPDetail[] = [
     {
