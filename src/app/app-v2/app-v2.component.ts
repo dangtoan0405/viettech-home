@@ -25,20 +25,19 @@ export class AppV2Component implements OnInit {
   ngOnInit(): void {
     this.getItemSelected();
     this.getDataJSONFile();
-    this.scrollChange$.pipe(debounceTime(200)).subscribe((position) => {
-      console.log('AppV2Component -> ngOnInit -> position', position);
+    this.scrollChange$.pipe(debounceTime(400)).subscribe((position) => {
       if (position < this.positionItemERP[0] && position < 200) {
         this.dataService.updateItemSelected('', false);
         return;
       }
       this.getPositionElement();
       const indexPosition: any = this.positionItemERP.findIndex(
-        (elt) => elt > position - 100
+        (elt) => elt > position - 10
       );
-      this.dataService.updateItemSelected(
-        this.itemERP[indexPosition].id,
-        false
-      );
+      // this.dataService.updateItemSelected(
+      //   this.itemERP[indexPosition].id,
+      //   false
+      // );
     });
   }
 
