@@ -7,10 +7,6 @@ import { AppV1Component } from './app-v1/app-v1.component';
 const routes: Routes = [
   {
     path: '',
-    component: AppV1Component,
-  },
-  {
-    path: 'v2',
     component: AppV2Component,
   },
 ];
