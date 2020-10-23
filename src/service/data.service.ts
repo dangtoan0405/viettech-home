@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { ItemERP } from 'src/model/item-erp';
 
 @Injectable({
   providedIn: 'root',
@@ -11,19 +10,11 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   getDataJSONFile() {
-    return this.http.get('assets/data.json');
+    return this.http.get('assets/data/data.json');
   }
 
-  updateItemSelected(itemId: string, scrollToView: boolean = true) {
-    console.log('DataService -> updateItemSelected -> itemId', itemId);
-    this.itemSelected.next(itemId);
-    if (scrollToView) {
-      this.scrollIntoViewItemSelected();
-    }
-  }
-
-  getItemSelectedAsObservable() {
-    return this.itemSelected.asObservable();
+  getItemERPInJSON() {
+    return this.http.get('assets/data/erp-item.json');
   }
 
   scrollIntoViewItemSelected() {

@@ -1,7 +1,7 @@
-export interface ItemERP {
-  id?: string;
-  title?: string;
-  description?: string;
-  detail?: ItemERP[];
-  float?: string;
+export interface ItemERPModel {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  color?: string;
 }

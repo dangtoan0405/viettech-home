@@ -1,11 +1,7 @@
 <div class="nav-bar-container">
   <div class="container__max-width">
     <div class="block-item-erp">
-      <div
-        *ngFor="let itemErp of listErp"
-        class="item-erp"
-        [class.active]="itemSelected === itemErp.id" (click)="selectItem(itemErp.id)"
-      >
+      <div *ngFor="let itemErp of listErp" class="item-erp">
         {{ itemErp.textSmall }}
         <br />
         <strong>{{ itemErp.textStrong }}</strong>

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "item1",
+        "icon": "home",
+        "title": "Item Name 1 ",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "color": "#1c6db2"
+    },
+    {
+        "id": "item2",
+        "icon": "home",
+        "title": "Item Name 2",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "color": "#1c6db2"
+    },
+    {
+        "id": "item3",
+        "icon": "home",
+        "title": "Item Name 3",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "color": "#1c6db2"
+    },
+    {
+        "id": "item14",
+        "icon": "home",
+        "title": "Item Name 4",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "color": "#1c6db2"
+    },
+    {
+        "id": "item5",
+        "icon": "home",
+        "title": "Item Name 5",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "color": "#1c6db2"
+    },
+    {
+        "id": "item6",
+        "icon": "home",
+        "title": "Item Name 6",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "color": "#1c6db2"
+    }
+]

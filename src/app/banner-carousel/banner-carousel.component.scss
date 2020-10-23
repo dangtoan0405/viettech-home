@@ -1,273 +1,107 @@
-* {
-  box-sizing: border-box;
-}
-
-.mySlides {
-  display: none;
-}
-
-.img-banner {
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
-  min-height: 760px;
   position: relative;
   margin: auto;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-}
 
-.caption {
-  .logo {
-    position: absolute;
-    top: -25px;
-    margin-left: 100px;
-  }
-  .text-caption {
-    position: absolute;
-    margin-left: 400px;
-    top: 200px;
-  }
-  .banner-cation {
-    position: absolute;
-    margin-left: 400px;
-    top: 50px;
-  }
-}
+  .model-erp {
+    background-image: url("../../assets/images/circle-erp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    .item-erp--row {
+      .block-item {
+        align-items: center;
+        border: 3px solid;
+        border-radius: 30px;
+        position: relative;
+      }
+      mat-icon {
+        font-size: 60px;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        padding: 20px 15px;
+        // border: 0px solid;
+        border-radius: 30px;
+        color: white;
+        background-color: #fff;
+        cursor: pointer;
+        &:hover {
+          -webkit-box-shadow: 2px 0px 10px 10px#fff;
+          -moz-box-shadow: 2px 0px 10px 10px #fff;
+          box-shadow: 2px 0px 10px 10px #fff;
+        }
+      }
+      .description-item {
+        width: 250px;
+        height: max-content;
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          position: relative;
+          &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: #46ae39;
+            width: 70px;
+            border: 1px solid #90ce88;
+            right: 0;
+            bottom: -5px;
+            position: absolute;
+          }
+        }
+        .detail {
+          font: 16px;
+          margin-bottom: 0;
+        }
+      }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+      .item-left {
+        margin-right: 125px;
+        display: flex;
+        mat-icon {
+          right: -10px;
+        }
+        .description-item {
+          border-right: none;
+          padding: 10px 30px 10px 20px;
+          text-align: right;
+          margin-right: 70px;
+        }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+        &.middle {
+          margin-right: 150px;
+        }
+      }
 
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.carousel-dot {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  span {
-    cursor: pointer;
-  }
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {
-    font-size: 11px;
-  }
-}
-
-.off-card {
-  height: 154px;
-  width: 154px;
-  border-radius: 50%;
-  text-align: center;
-  position: absolute;
-  left: calc(50% - 81px);
-  top: 50px;
-  background: #e7ab3c;
-  z-index: 1;
-  -webkit-transition: all 1s ease 1s;
-  -o-transition: all 1s ease 1s;
-  transition: all 1s ease 1s;
-
-  animation-name: rotate045;
-  animation-duration: 1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:after {
-    position: absolute;
-    left: 3px;
-    top: 3px;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    border: 2px dashed #ffffff;
-    content: "";
-    border-radius: 50%;
-    z-index: -1;
-  }
-
-  .promotion {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: #ffffff;
-    font-weight: 700;
-    margin: 10px;
-    line-height: 1em;
-  }
-}
-
-@keyframes rotate045 {
-  from {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
-
-.ads-block {
-  padding-left: 10px;
-  padding-top: 40px;
-  .ads-category {
-    font-size: 22px;
-    font-weight: 500;
-  }
-  .ads-title-ads {
-    font-size: 30px;
-    font-weight: 700;
-  }
-
-  > div {
-    animation-name: move-top;
-    animation-duration: 1s;
-    position: relative;
-  }
-}
-
-.ads-button {
-  position: absolute;
-  bottom: 40px;
-  animation-name: hide-button;
-  animation-duration: 2s;
-  width: 100%;
-  .button {
-    text-transform: uppercase;
-    margin: 0 30px;
-    height: 50px;
-    font-size: 20px;
-  }
-}
-
-@keyframes move-top {
-  from {
-    top: 200px;
-    opacity: 0.5;
-  }
-  to {
-    top: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes hide-button {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 612px) and (max-width: 980px) {
-  .off-card {
-    height: 120px;
-    width: 120px;
-    left: calc(50% - 60px);
-
-    .promotion {
-      font-size: 24px;
-    }
-  }
-
-  .ads-button {
-    bottom: 30px;
-    .button {
-      height: 40px;
-      font-size: 16px;
-    }
-  }
-}
-
-@media (max-width: 611px) {
-  .off-card {
-    height: 120px;
-    width: 120px;
-    left: calc(75% - 60px);
-    .promotion {
-      font-size: 24px;
-    }
-  }
-
-  .ads-button {
-    bottom: 30px;
-    text-align: left !important;
-    .button {
-      height: 40px;
-
-      font-size: 16px;
+      .item-right {
+        margin-left: 125px;
+        display: flex;
+        mat-icon {
+          left: -10px;
+        }
+        .description-item {
+          border-left: none;
+          text-align: left;
+          padding: 10px 20px 10px 30px;
+          margin-left: 70px;
+        }
+        &.middle {
+          margin-left: 150px;
+        }
+        .title {
+          &:after {
+            right: unset;
+            left: 0px;
+          }
+        }
+      }
     }
   }
 }

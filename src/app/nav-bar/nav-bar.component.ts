@@ -54,17 +54,5 @@ export class NavBarComponent implements OnInit {
   ];
   constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {
-    this.getItemSelected();
-  }
-
-  getItemSelected() {
-    this.dataService.getItemSelectedAsObservable().subscribe((res) => {
-      this.itemSelected = res;
-    });
-  }
-
-  selectItem(id: string) {
-    this.dataService.updateItemSelected(id);
-  }
+  ngOnInit(): void {}
 }

@@ -4,36 +4,118 @@
     'background-image': 'url(assets/images/header-image.png)'
   }"
 >
-  <div class="caption container__max-width">
-    <div class="logo">
-      <img src="assets/images/logo-viettech.png" alt="" />
+  <div
+    *ngIf="listDataERP.length !== 0"
+    fxLayout="row wrap"
+    class="model-erp container__max-width"
+  >
+    <div
+      fxLayout="row"
+      fxFlex="100"
+      class="item-erp--row"
+      fxLayoutAlign="center center"
+    >
+      <!-- Item1 -->
+      <div
+        class="block-item item-left"
+        [ngStyle]="{ 'border-color': listDataERP[0].color }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          [ngStyle]="{ 'background-color': listDataERP[0].color }"
+          >{{ listDataERP[0].icon }}</mat-icon
+        >
+        <div class="description-item">
+          <p class="title">{{ listDataERP[0].title }}</p>
+          <p class="detail">
+            {{ listDataERP[0].description }}
+          </p>
+        </div>
+      </div>
+      <div
+        class="block-item item-right"
+        [ngStyle]="{ 'border-color': listDataERP[1].color }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          [ngStyle]="{ 'background-color': listDataERP[1].color }"
+          >{{ listDataERP[1].icon }}</mat-icon
+        >
+        <div class="description-item">
+          <p class="title">{{ listDataERP[1].title }}</p>
+          <p class="detail">{{ listDataERP[1].description }}</p>
+        </div>
+      </div>
     </div>
-    <div class="banner-cation">
-      <img src="assets/images/caption1.png" alt="" />
+    <div
+      fxLayout="row"
+      fxFlex="100"
+      class="item-erp--row"
+      fxLayoutAlign="center center"
+    >
+      <div
+        class="block-item item-left middle"
+        [ngStyle]="{ 'border-color': listDataERP[2].color }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          [ngStyle]="{ 'background-color': listDataERP[2].color }"
+          >{{ listDataERP[2].icon }}</mat-icon
+        >
+        <div class="description-item">
+          <p class="title">{{ listDataERP[2].title }}</p>
+          <p class="detail">{{ listDataERP[2].description }}</p>
+        </div>
+      </div>
+      <div
+        class="block-item item-right middle"
+        [ngStyle]="{ 'border-color': listDataERP[3].color }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          [ngStyle]="{ 'background-color': listDataERP[3].color }"
+          >{{ listDataERP[3].icon }}</mat-icon
+        >
+        <div class="description-item">
+          <p class="title">{{ listDataERP[3].title }}</p>
+          <p class="detail">{{ listDataERP[3].description }}</p>
+        </div>
+      </div>
     </div>
-    <div class="text-caption">
-      <ul>
-        <li>Giải pháp phần mềm Quản Trị Doanh Nghiệp</li>
-        <li>Thiết kế website, gia công ứng dụng mobile iOS, Android</li>
-        <li>Social/Digital Marketing, eCommerce, Multimedia</li>
-      </ul>
+    <div
+      fxLayout="row"
+      fxFlex="100"
+      class="item-erp--row"
+      fxLayoutAlign="center center"
+    >
+      <div
+        class="block-item item-left"
+        [ngStyle]="{ 'border-color': listDataERP[4].color }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          [ngStyle]="{ 'background-color': listDataERP[4].color }"
+          >{{ listDataERP[4].icon }}</mat-icon
+        >
+        <div class="description-item">
+          <p class="title">{{ listDataERP[4].title }}</p>
+          <p class="detail">{{ listDataERP[4].description }}</p>
+        </div>
+      </div>
+      <div
+        class="block-item item-right"
+        [ngStyle]="{ 'border-color': listDataERP[5].color }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          [ngStyle]="{ 'background-color': listDataERP[5].color }"
+          >{{ listDataERP[5].icon }}</mat-icon
+        >
+        <div class="description-item">
+          <p class="title">{{ listDataERP[5].title }}</p>
+          <p class="detail">{{ listDataERP[5].description }}</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div
-    *ngFor="let item of dataSource; let i = index"
-    class="mySlides fade img-banner container__max-width"
-    [id]="'idCheck' + i"
-    [ngStyle]="{
-      display: startIndex === i + 1 ? 'block' : 'none',
-      'background-image': 'url(' + item.imageUrl + ')'
-    }"
-  ></div>
-</div>
-<div class="carousel-dot">
-  <span
-    *ngFor="let item of dataSource; let i = index"
-    [class.active]="startIndex === i + 1"
-    (click)="clickDotVer2(i)"
-    class="dot"
-  ></span>
 </div>

@@ -9,16 +9,15 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BannerCarouselComponent } from './banner-carousel/banner-carousel.component';
-import { AppV2Component } from './app-v2/app-v2.component';
-import { AppV1Component } from './app-v1/app-v1.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material-module';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavBarComponent,
     BannerCarouselComponent,
-    AppV2Component,
-    AppV1Component,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +30,10 @@ import { AppV1Component } from './app-v1/app-v1.component';
         deps: [HttpClient],
       },
     }),
+
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
