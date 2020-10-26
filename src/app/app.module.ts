@@ -8,10 +8,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CircleERPComponent } from './banner-carousel/circle-erp.component';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
+import { CircleERPComponent } from './circle-erp/circle-erp.component';
 @NgModule({
   declarations: [
     AppComponent,
