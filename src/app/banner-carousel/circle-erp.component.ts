@@ -3,11 +3,11 @@ import { ItemERPModel } from 'src/model/item-erp';
 import { DataService } from 'src/service/data.service';
 
 @Component({
-  selector: 'app-banner-carousel',
-  templateUrl: './banner-carousel.component.html',
-  styleUrls: ['./banner-carousel.component.scss'],
+  selector: 'app-circle-erp',
+  templateUrl: './circle-erp.component.html',
+  styleUrls: ['./circle-erp.component.scss'],
 })
-export class BannerCarouselComponent implements OnInit {
+export class CircleERPComponent implements OnInit {
   listDataERP: ItemERPModel[] = [];
   constructor(private dataService: DataService) {
     this.getDataERP();

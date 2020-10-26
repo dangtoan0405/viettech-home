@@ -8,7 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { BannerCarouselComponent } from './banner-carousel/banner-carousel.component';
+import { CircleERPComponent } from './banner-carousel/circle-erp.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
@@ -17,7 +17,7 @@ import { MaterialModule } from './material-module';
     AppComponent,
     FooterComponent,
     NavBarComponent,
-    BannerCarouselComponent,
+    CircleERPComponent,
   ],
   imports: [
     BrowserModule,

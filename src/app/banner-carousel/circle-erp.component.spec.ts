@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BannerCarouselComponent } from './banner-carousel.component';
+import { CircleERPComponent } from './circle-erp.component';
 
 describe('CarouselComponent', () => {
-  let component: BannerCarouselComponent;
-  let fixture: ComponentFixture<BannerCarouselComponent>;
+  let component: CircleERPComponent;
+  let fixture: ComponentFixture<CircleERPComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BannerCarouselComponent ]
+      declarations: [ CircleERPComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BannerCarouselComponent);
+    fixture = TestBed.createComponent(CircleERPComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
