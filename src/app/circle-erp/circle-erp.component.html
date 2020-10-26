@@ -6,125 +6,153 @@
 </div>
 
 <!-- circle -->
-<div
-  class="slideshow-container"
-  [ngStyle]="{
-    'background-image': 'url(assets/images/header-image.png)'
-  }"
->
-  <div
-    *ngIf="listDataERP.length !== 0"
-    fxLayout="row wrap"
-    class="model-erp container__max-width"
-  >
+<div class="background-img">
+  <div class="slideshow-container">
     <div
-      fxLayout="row"
-      fxFlex="100"
-      class="item-erp--row"
-      fxLayoutAlign="center center"
-    >
-      <!-- Item1 -->
-      <div
-        class="block-item item-left"
-        [ngStyle]="{ 'border-color': listDataERP[0].color }"
-      >
-        <mat-icon
-          aria-hidden="false"
-          [ngStyle]="{ 'background-color': listDataERP[0].color }"
-          >{{ listDataERP[0].icon }}</mat-icon
-        >
-        <div class="description-item">
-          <p class="title">{{ listDataERP[0].title }}</p>
-          <p class="detail">
-            {{ listDataERP[0].description }}
-          </p>
-        </div>
-      </div>
-      <div
-        class="block-item item-right"
-        [ngStyle]="{ 'border-color': listDataERP[1].color }"
-      >
-        <mat-icon
-          aria-hidden="false"
-          [ngStyle]="{ 'background-color': listDataERP[1].color }"
-          >{{ listDataERP[1].icon }}</mat-icon
-        >
-        <div class="description-item">
-          <p class="title">{{ listDataERP[1].title }}</p>
-          <p class="detail">{{ listDataERP[1].description }}</p>
-        </div>
-      </div>
-    </div>
-    <div
-      fxLayout="row"
-      fxFlex="100"
-      class="item-erp--row"
-      fxLayoutAlign="center center"
+      *ngIf="listDataERP.length !== 0"
+      fxLayout="row wrap"
+      class="model-erp container__max-width"
     >
       <div
-        class="block-item item-left middle"
-        [ngStyle]="{ 'border-color': listDataERP[2].color }"
+        fxLayout="row"
+        fxFlex="100"
+        class="item-erp--row"
+        fxLayoutAlign="center center"
       >
-        <mat-icon
-          aria-hidden="false"
-          [ngStyle]="{ 'background-color': listDataERP[2].color }"
-          >{{ listDataERP[2].icon }}</mat-icon
+        <!-- Item1 -->
+        <div
+          class="block-item item-left"
+          [ngStyle]="{ 'border-color': listDataERP[0].color }"
         >
-        <div class="description-item">
-          <p class="title">{{ listDataERP[2].title }}</p>
-          <p class="detail">{{ listDataERP[2].description }}</p>
+          <mat-icon
+            aria-hidden="false"
+            [ngStyle]="{ 'background-color': listDataERP[0].color }"
+            >{{ listDataERP[0].icon }}</mat-icon
+          >
+          <div class="description-item">
+            <p class="title">{{ listDataERP[0].title }}</p>
+            <p class="detail">
+              {{ listDataERP[0].description }}
+            </p>
+          </div>
+        </div>
+        <div
+          class="block-item item-right"
+          [ngStyle]="{ 'border-color': listDataERP[1].color }"
+        >
+          <mat-icon
+            aria-hidden="false"
+            [ngStyle]="{ 'background-color': listDataERP[1].color }"
+            >{{ listDataERP[1].icon }}</mat-icon
+          >
+          <div class="description-item">
+            <p class="title">{{ listDataERP[1].title }}</p>
+            <p class="detail">{{ listDataERP[1].description }}</p>
+          </div>
         </div>
       </div>
       <div
-        class="block-item item-right middle"
-        [ngStyle]="{ 'border-color': listDataERP[3].color }"
+        fxLayout="row"
+        fxFlex="100"
+        class="item-erp--row"
+        fxLayoutAlign="center center"
       >
-        <mat-icon
-          aria-hidden="false"
-          [ngStyle]="{ 'background-color': listDataERP[3].color }"
-          >{{ listDataERP[3].icon }}</mat-icon
+        <div
+          class="block-item item-left middle"
+          [ngStyle]="{ 'border-color': listDataERP[2].color }"
         >
-        <div class="description-item">
-          <p class="title">{{ listDataERP[3].title }}</p>
-          <p class="detail">{{ listDataERP[3].description }}</p>
+          <mat-icon
+            aria-hidden="false"
+            [ngStyle]="{ 'background-color': listDataERP[2].color }"
+            >{{ listDataERP[2].icon }}</mat-icon
+          >
+          <div class="description-item">
+            <p class="title">{{ listDataERP[2].title }}</p>
+            <p class="detail">{{ listDataERP[2].description }}</p>
+          </div>
+        </div>
+        <div
+          class="block-item item-right middle"
+          [ngStyle]="{ 'border-color': listDataERP[3].color }"
+        >
+          <mat-icon
+            aria-hidden="false"
+            [ngStyle]="{ 'background-color': listDataERP[3].color }"
+            >{{ listDataERP[3].icon }}</mat-icon
+          >
+          <div class="description-item">
+            <p class="title">{{ listDataERP[3].title }}</p>
+            <p class="detail">{{ listDataERP[3].description }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      fxLayout="row"
-      fxFlex="100"
-      class="item-erp--row"
-      fxLayoutAlign="center center"
-    >
       <div
-        class="block-item item-left"
-        [ngStyle]="{ 'border-color': listDataERP[4].color }"
+        fxLayout="row"
+        fxFlex="100"
+        class="item-erp--row"
+        fxLayoutAlign="center center"
       >
-        <mat-icon
-          aria-hidden="false"
-          [ngStyle]="{ 'background-color': listDataERP[4].color }"
-          >{{ listDataERP[4].icon }}</mat-icon
+        <div
+          class="block-item item-left"
+          [ngStyle]="{ 'border-color': listDataERP[4].color }"
         >
-        <div class="description-item">
-          <p class="title">{{ listDataERP[4].title }}</p>
-          <p class="detail">{{ listDataERP[4].description }}</p>
+          <mat-icon
+            aria-hidden="false"
+            [ngStyle]="{ 'background-color': listDataERP[4].color }"
+            >{{ listDataERP[4].icon }}</mat-icon
+          >
+          <div class="description-item">
+            <p class="title">{{ listDataERP[4].title }}</p>
+            <p class="detail">{{ listDataERP[4].description }}</p>
+          </div>
         </div>
-      </div>
-      <div
-        class="block-item item-right"
-        [ngStyle]="{ 'border-color': listDataERP[5].color }"
-      >
-        <mat-icon
-          aria-hidden="false"
-          [ngStyle]="{ 'background-color': listDataERP[5].color }"
-          >{{ listDataERP[5].icon }}</mat-icon
+        <div
+          class="block-item item-right"
+          [ngStyle]="{ 'border-color': listDataERP[5].color }"
         >
-        <div class="description-item">
-          <p class="title">{{ listDataERP[5].title }}</p>
-          <p class="detail">{{ listDataERP[5].description }}</p>
+          <mat-icon
+            aria-hidden="false"
+            [ngStyle]="{ 'background-color': listDataERP[5].color }"
+            >{{ listDataERP[5].icon }}</mat-icon
+          >
+          <div class="description-item">
+            <p class="title">{{ listDataERP[5].title }}</p>
+            <p class="detail">{{ listDataERP[5].description }}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <!-- End circle -->
+
+<!-- start detail -->
+<div class="block-detail--blue">
+  <div
+    class="item-detail container__max-width"
+    *ngFor="let itemErp of listDataERP; let i = index"
+    fxLayout="row"
+  >
+    <div class="info-detail" fxFlex="50" [fxFlexOrder]="(i + 1) % 2">
+      <h1>{{ itemErp.title }}</h1>
+      <ul>
+        <li *ngFor="let info of itemErp.items">
+          <div class="dot-li">
+            <div class="dot-li--overlay"></div>
+          </div>
+          <h2>{{ info.title }}</h2>
+          <p>
+            {{ info.description }}
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="img-detail" fxFlex="50" [fxFlexOrder]="i % 2">
+      <img [src]="itemErp.image" />
+    </div>
+  </div>
+</div>
+
+<!-- end detail -->

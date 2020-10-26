@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+  HostListener,
+} from '@angular/core';
 import { DataService } from 'src/service/data.service';
 export interface ERPDetail {
   id: string;
@@ -11,7 +19,7 @@ export interface ERPDetail {
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit, AfterViewInit {
   @Input() itemSelected = '';
   @Output() itemSelectedChange = new EventEmitter<string>();
   public listErp: ERPDetail[] = [
@@ -54,5 +62,19 @@ export class NavBarComponent implements OnInit {
   ];
   constructor(private dataService: DataService) {}
 
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    // console.log($event['Window']);
+    console.log('scrolling');
+    if (
+      document.body.scrollTop > 80 ||
+      document.documentElement.scrollTop > 80
+    ) {
+      document.getElementById('navbar').classList.add('nav-bar--scrolling');
+    } else {
+      document.getElementById('navbar').classList.remove('nav-bar--scrolling');
+    }
+  }
   ngOnInit(): void {}
+
+  ngAfterViewInit() {}
 }

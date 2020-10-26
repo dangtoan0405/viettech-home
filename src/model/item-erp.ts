@@ -4,4 +4,6 @@ export interface ItemERPModel {
   title: string;
   description: string;
   color?: string;
+  items?: [];
+  image?: string;
 }
