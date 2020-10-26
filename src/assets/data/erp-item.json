@@ -5,7 +5,7 @@
         "title": "TÀI CHÍNH KẾ TOÁN ",
         "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
         "color": "#1c6db2",
-        "image": "assets/images/item-erp-1.png",
+        "image": "assets/images/erp/ke-toan.webp",
         "items": [
             {
                 "title": "Title detail item1",
@@ -31,7 +31,7 @@
         "title": "BÁO CÁO VÀ PHÂN TÍCH",
         "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
         "color": "#00c5a5",
-        "image": "assets/images/item-erp-1.png",
+        "image": "assets/images/erp/phan-tich-chart.png",
         "items": [
             {
                 "title": "Title detail item1",
@@ -57,7 +57,7 @@
         "title": "QUÁN LÝ NHÂN SỰ",
         "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
         "color": "#07da25",
-        "image": "assets/images/item-erp-1.png",
+        "image": "assets/images/erp/quan-ly-nhan-su.png",
         "items": [
             {
                 "title": "Title detail item1",
@@ -83,7 +83,7 @@
         "title": "THÔNG TIN ĐỐI TÁC",
         "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
         "color": "#ffc40b",
-        "image": "assets/images/item-erp-1.png",
+        "image": "assets/images/erp/item-erp-1.png",
         "items": [
             {
                 "title": "Title detail item1",
@@ -109,7 +109,7 @@
         "title": "HOẠT ĐỘNG BÁN HÀNG",
         "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
         "color": "#ffe500",
-        "image": "assets/images/item-erp-1.png",
+        "image": "assets/images/erp/ban-hang.png",
         "items": [
             {
                 "title": "Title detail item1",
@@ -135,7 +135,7 @@
         "title": "ỨNG DỤNG MOBILE",
         "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
         "color": "#b7b7b7",
-        "image": "assets/images/item-erp-1.png",
+        "image": "assets/images/erp/ung-dung-mobile.webp",
         "items": [
             {
                 "title": "Title detail item1",

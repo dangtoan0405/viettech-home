@@ -1,12 +1,10 @@
 <div class="nav-bar-container" id="navbar">
   <div class="container__max-width">
+    <div class="block-logo"></div>
     <div class="block-item-erp">
       <div *ngFor="let itemErp of listErp" class="item-erp">
-        {{ itemErp.textSmall }}
-        <br />
         <strong>{{ itemErp.textStrong }}</strong>
       </div>
     </div>
-    <div class="block-logo"></div>
   </div>
 </div>

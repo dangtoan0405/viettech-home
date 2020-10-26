@@ -14,10 +14,12 @@ body {
 
 .nav-bar--scrolling {
   height: 45px !important;
+  font-size: 16px !important;
 }
 
 .nav-bar-container {
   position: fixed;
+  font-size: 18px;
   z-index: 10;
   height: 80px;
   background-color: #fff;
@@ -40,7 +42,7 @@ body {
       .item-erp {
         display: block;
         padding: 0 20px;
-        font-size: 14px;
+
         font-weight: 500;
         cursor: pointer;
         color: #2672b4;
@@ -82,7 +84,7 @@ body {
     }
 
     .block-logo {
-      float: right;
+      float: left;
       background-image: url("./assets/images/logo-viettech.png");
       width: 200px;
       height: 100%;
@@ -98,144 +100,6 @@ body {
     Container
 */
 
-.main__container {
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;
-}
-
-.text-caption {
-  ul {
-    list-style-type: none;
-  }
-  li {
-    background: url("assets/images/bullet.png") no-repeat left center;
-    padding-left: 19px;
-    text-align: left;
-    font-weight: 300;
-    font-size: 24px;
-    color: #fff;
-  }
-}
-
-@import "~compass-mixins/lib/compass/css3";
-
-/// Mixin to place items on a circle
-/// @param {Integer} $item-count - Number of items on the circle
-/// @param {Length} $circle-size - Large circle size
-/// @param {Length} $item-size - Single item size
-@mixin on-circle($item-count, $circle-size, $item-size) {
-  position: relative;
-  width: $circle-size;
-  height: $circle-size;
-  border-radius: 50%;
-  padding: 0;
-  list-style: none;
-
-  > * {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -($item-size / 2);
-    width: $item-size;
-    height: $item-size;
-
-    $angle: (360 / $item-count);
-    $rot: 180;
-
-    @for $i from 1 through $item-count {
-      &:nth-of-type(#{$i}) {
-        transform: rotate($rot * 1deg)
-          translate($circle-size / 2)
-          rotate($rot * -1deg);
-      }
-
-      $rot: $rot + $angle;
-    }
-  }
-}
-
-.circle-container {
-  @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 6em);
-  border: solid 5px tomato;
-  margin: 50px;
-
-  img {
-    cursor: pointer;
-    display: block;
-    max-width: 100%;
-    border-radius: 50%;
-    filter: grayscale(80%);
-    border: solid 5px tomato;
-    transition: 0.15s;
-
-    &:hover {
-      filter: grayscale(0);
-    }
-    &.active {
-      filter: grayscale(0);
-    }
-  }
-}
-
-.detail-text {
-  position: absolute;
-  width: 100%;
-  animation-name: move-right;
-  animation-duration: 1s;
-}
-
-@keyframes move-right {
-  from {
-    right: -100%;
-  }
-  to {
-    right: 0;
-  }
-}
-
-.description-title {
-  position: relative;
-  display: block;
-  background-color: #62c7f5;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  color: white;
-  &::after {
-    content: "";
-    right: 10px;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='angle-up' class='svg-inline--fa fa-angle-up fa-w-10' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z'%3E%3C/path%3E%3C/svg%3E");
-  }
-
-  &.active-down {
-    &::after {
-      background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='angle-down' class='svg-inline--fa fa-angle-down fa-w-10' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'%3E%3C/path%3E%3C/svg%3E");
-    }
-  }
-}
-
-.title-sub-left {
-  position: relative;
-  display: block;
-  padding-left: 35px;
-  color: #62c7f5;
-  &::after {
-    content: "";
-    left: 5px;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='dot-circle' class='svg-inline--fa fa-dot-circle fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%2362c7f5' d='M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z'%3E%3C/path%3E%3C/svg%3E");
-  }
-}
 
 html,
 body {

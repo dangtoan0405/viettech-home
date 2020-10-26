@@ -22,4 +22,15 @@ export class CircleERPComponent implements OnInit {
       this.listDataERP = dataERP;
     });
   }
+
+  scrollToItem(idElement: string) {
+    setTimeout(() => {
+      const el = document.getElementById(idElement);
+      if (!el) {
+        return;
+      }
+      const topOffset = el.offsetTop - 100;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }, 500);
+  }
 }

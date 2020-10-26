@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 import { HttpClient } from '@angular/common/http';
@@ -18,10 +18,27 @@ export class AppComponent implements OnInit {
     this.translateService.setDefaultLang('vn');
   }
 
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    if (
+      document.body.scrollTop > 80 ||
+      document.documentElement.scrollTop > 80
+    ) {
+      document.getElementById('navbar').classList.add('nav-bar--scrolling');
+      document.getElementById('moveTop').style.display = 'block';
+    } else {
+      document.getElementById('navbar').classList.remove('nav-bar--scrolling');
+      document.getElementById('moveTop').style.display = 'none';
+    }
+  }
+
   ngOnInit() {
     AOS.init({
       duration: 2000,
     });
+  }
+
+  moveOnTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   collapseDescription(elementId) {

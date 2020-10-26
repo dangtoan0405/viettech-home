@@ -27,6 +27,7 @@
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[0].color }"
+            (click)="scrollToItem(listDataERP[0].id)"
             >{{ listDataERP[0].icon }}</mat-icon
           >
           <div class="description-item">
@@ -43,6 +44,7 @@
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[1].color }"
+            (click)="scrollToItem(listDataERP[1].id)"
             >{{ listDataERP[1].icon }}</mat-icon
           >
           <div class="description-item">
@@ -64,6 +66,7 @@
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[2].color }"
+            (click)="scrollToItem(listDataERP[2].id)"
             >{{ listDataERP[2].icon }}</mat-icon
           >
           <div class="description-item">
@@ -78,6 +81,7 @@
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[3].color }"
+            (click)="scrollToItem(listDataERP[3].id)"
             >{{ listDataERP[3].icon }}</mat-icon
           >
           <div class="description-item">
@@ -99,6 +103,7 @@
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[4].color }"
+            (click)="scrollToItem(listDataERP[4].id)"
             >{{ listDataERP[4].icon }}</mat-icon
           >
           <div class="description-item">
@@ -113,6 +118,7 @@
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[5].color }"
+            (click)="scrollToItem(listDataERP[5].id)"
             >{{ listDataERP[5].icon }}</mat-icon
           >
           <div class="description-item">
@@ -134,7 +140,12 @@
     *ngFor="let itemErp of listDataERP; let i = index"
     fxLayout="row"
   >
-    <div class="info-detail" fxFlex="50" [fxFlexOrder]="(i + 1) % 2">
+    <div
+      [id]="itemErp.id"
+      class="info-detail"
+      fxFlex="50"
+      [fxFlexOrder]="(i + 1) % 2"
+    >
       <h1>{{ itemErp.title }}</h1>
       <ul>
         <li *ngFor="let info of itemErp.items">
