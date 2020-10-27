@@ -3,7 +3,7 @@
         "id": "item1",
         "icon": "request_quote",
         "title": "TÀI CHÍNH KẾ TOÁN ",
-        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả. Kiểm soát tất cả các hoạt động ngân hàng và các nghiệp vụ cấn trừ tài khoản linh hoạt, cung cấp đa dạng các báo cáo tài chính cũng như các báo cáo kết quả hoạt động kinh doanh, lưu chuyển tiền tệ, quản lý tuổi nợ một cách nhanh chóng, chính xác và kịp thời.",
         "color": "#1c6db2",
         "image": "assets/images/erp/ke-toan.webp",
         "items": [
@@ -29,7 +29,7 @@
         "id": "item2",
         "icon": "plagiarism",
         "title": "BÁO CÁO VÀ PHÂN TÍCH",
-        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "description": "Hoạt động dựa trên thông tin thời gian thực. Các báo cáo trực quan giúp bạn dễ dàng tiếp cận thông tin cần thiết và đánh giá một cách hiệu quả chính xác. Cảnh báo và giải quyết một cách nhanh chóng các vấn đề cần xử lý khẩn cấp. Kiểm soát quản lý và các cảnh báo, như quản lý việc giảm giá hàng bán và quy trình phê duyệt, giúp các hoạt động xử lý ổn định.",
         "color": "#00c5a5",
         "image": "assets/images/erp/phan-tich-chart.png",
         "items": [
@@ -81,7 +81,7 @@
         "id": "item14",
         "icon": "groups",
         "title": "THÔNG TIN ĐỐI TÁC",
-        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "description": "Doanh nghiệp có thể quản lý quan hệ khách hàng một cách hiệu quả khi cho phép bạn phân tích thông tin khách hàng từ hoạt động kinh doanh, mua hàng và tài chính để đáp ứng một cách nhanh chóng các nhu cầu của doanh nghiệp..",
         "color": "#ffc40b",
         "image": "assets/images/erp/item-erp-1.png",
         "items": [
@@ -107,7 +107,7 @@
         "id": "item5",
         "icon": "shopping_cart",
         "title": "HOẠT ĐỘNG BÁN HÀNG",
-        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "description": "Cho phép bạn quản lý toàn bộ quy trình mua hàng, từ khâu đặt hàng, nhận hàng đến khâu ghi nhận hóa đơn phải trả hoặc trả lại hàng mua. Bên cạnh đó, bạn còn có thể tạo nhiều loại báo cáo phục vụ mục đích phân tích, chẳng hạn như: Báo cáo phân tích mua hàng theo khối lượng, Báo cáo thông tin giá cả, Báo cáo Theo dõi công nợ nhà cung cấp...",
         "color": "#ffe500",
         "image": "assets/images/erp/ban-hang.png",
         "items": [
@@ -133,7 +133,7 @@
         "id": "item6",
         "icon": "phone_iphone",
         "title": "ỨNG DỤNG MOBILE",
-        "description": "Quản lý sổ cái, bút toán, ngân sách và các khoản phải thu, phải trả...",
+        "description": "Sử dụng CRM để quản lý nhu cầu khách hàng giúp bạn tăng doanh thu mỗi khách hàng. Quản lý cơ hội bán hàng, thông tin và hoạt động khách hàng. Ghi nhận báo giá và đơn hàng - hóa đơn và công nợ. Dự báo bán hàng trong tương lai",
         "color": "#b7b7b7",
         "image": "assets/images/erp/ung-dung-mobile.webp",
         "items": [

@@ -20,36 +20,47 @@
         fxLayoutAlign="center center"
       >
         <!-- Item1 -->
-        <div
-          class="block-item item-left"
-          [ngStyle]="{ 'border-color': listDataERP[0].color }"
-        >
+        <div class="block-item item-left">
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[0].color }"
             (click)="scrollToItem(listDataERP[0].id)"
             >{{ listDataERP[0].icon }}</mat-icon
           >
-          <div class="description-item">
+          <div
+            class="description-item"
+            [ngStyle]="{ 'border-color': listDataERP[0].color }"
+          >
             <p class="title">{{ listDataERP[0].title }}</p>
-            <p class="detail">
+            <p
+              class="detail"
+              [matTooltip]="listDataERP[0].description"
+              matTooltipClass="tool-tip-custom"
+            >
               {{ listDataERP[0].description }}
             </p>
           </div>
         </div>
-        <div
-          class="block-item item-right"
-          [ngStyle]="{ 'border-color': listDataERP[1].color }"
-        >
+        <div class="block-item item-right">
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[1].color }"
             (click)="scrollToItem(listDataERP[1].id)"
             >{{ listDataERP[1].icon }}</mat-icon
           >
-          <div class="description-item">
+
+          <div
+            class="description-item"
+            [ngStyle]="{ 'border-color': listDataERP[1].color }"
+          >
             <p class="title">{{ listDataERP[1].title }}</p>
-            <p class="detail">{{ listDataERP[1].description }}</p>
+            <p
+              class="detail"
+              [matTooltip]="listDataERP[1].description"
+              matTooltipClass="tool-tip-custom"
+            >
+              {{ listDataERP[1].description }}
+            </p>
           </div>
         </div>
       </div>
@@ -59,34 +70,48 @@
         class="item-erp--row"
         fxLayoutAlign="center center"
       >
-        <div
-          class="block-item item-left middle"
-          [ngStyle]="{ 'border-color': listDataERP[2].color }"
-        >
+        <div class="block-item item-left middle">
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[2].color }"
             (click)="scrollToItem(listDataERP[2].id)"
             >{{ listDataERP[2].icon }}</mat-icon
           >
-          <div class="description-item">
+
+          <div
+            class="description-item"
+            [ngStyle]="{ 'border-color': listDataERP[2].color }"
+          >
             <p class="title">{{ listDataERP[2].title }}</p>
-            <p class="detail">{{ listDataERP[2].description }}</p>
+            <p
+              class="detail"
+              [matTooltip]="listDataERP[2].description"
+              matTooltipClass="tool-tip-custom"
+            >
+              {{ listDataERP[2].description }}
+            </p>
           </div>
         </div>
-        <div
-          class="block-item item-right middle"
-          [ngStyle]="{ 'border-color': listDataERP[3].color }"
-        >
+        <div class="block-item item-right middle">
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[3].color }"
             (click)="scrollToItem(listDataERP[3].id)"
             >{{ listDataERP[3].icon }}</mat-icon
           >
-          <div class="description-item">
+
+          <div
+            class="description-item"
+            [ngStyle]="{ 'border-color': listDataERP[3].color }"
+          >
             <p class="title">{{ listDataERP[3].title }}</p>
-            <p class="detail">{{ listDataERP[3].description }}</p>
+            <p
+              class="detail"
+              [matTooltip]="listDataERP[3].description"
+              matTooltipClass="tool-tip-custom"
+            >
+              {{ listDataERP[3].description }}
+            </p>
           </div>
         </div>
       </div>
@@ -96,34 +121,48 @@
         class="item-erp--row"
         fxLayoutAlign="center center"
       >
-        <div
-          class="block-item item-left"
-          [ngStyle]="{ 'border-color': listDataERP[4].color }"
-        >
+        <div class="block-item item-left">
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[4].color }"
             (click)="scrollToItem(listDataERP[4].id)"
             >{{ listDataERP[4].icon }}</mat-icon
           >
-          <div class="description-item">
+
+          <div
+            class="description-item"
+            [ngStyle]="{ 'border-color': listDataERP[4].color }"
+          >
             <p class="title">{{ listDataERP[4].title }}</p>
-            <p class="detail">{{ listDataERP[4].description }}</p>
+            <p
+              class="detail"
+              [matTooltip]="listDataERP[4].description"
+              matTooltipClass="tool-tip-custom"
+            >
+              {{ listDataERP[4].description }}
+            </p>
           </div>
         </div>
-        <div
-          class="block-item item-right"
-          [ngStyle]="{ 'border-color': listDataERP[5].color }"
-        >
+        <div class="block-item item-right">
           <mat-icon
             aria-hidden="false"
             [ngStyle]="{ 'background-color': listDataERP[5].color }"
             (click)="scrollToItem(listDataERP[5].id)"
             >{{ listDataERP[5].icon }}</mat-icon
           >
-          <div class="description-item">
+
+          <div
+            class="description-item"
+            [ngStyle]="{ 'border-color': listDataERP[5].color }"
+          >
             <p class="title">{{ listDataERP[5].title }}</p>
-            <p class="detail">{{ listDataERP[5].description }}</p>
+            <p
+              class="detail"
+              [matTooltip]="listDataERP[5].description"
+              matTooltipClass="tool-tip-custom"
+            >
+              {{ listDataERP[5].description }}
+            </p>
           </div>
         </div>
       </div>
