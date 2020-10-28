@@ -12,15 +12,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
-import { CircleERPComponent } from './circle-erp/circle-erp.component';
-import { ItemDetailComponent } from './circle-erp/item-detail/item-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavBarComponent,
-    CircleERPComponent,
-    ItemDetailComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

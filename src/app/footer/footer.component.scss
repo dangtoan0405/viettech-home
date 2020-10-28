@@ -1,6 +1,7 @@
 .footer-background {
   background-color: rgba(9, 115, 172, 0.8);
   color: #fff;
+  padding-bottom: 50px;
   .title {
     font-size: 30px;
     text-align: center;
@@ -22,16 +23,61 @@
       margin-bottom: 5px;
     }
   }
+}
 
-  .footer-button {
-    text-align: center;
-    button {
-      font-size: 24px;
-      padding: 10px 30px;
-      text-transform: uppercase;
-      font-weight: bolder;
-      background: #ffb303;
-      color: #fff;
+.form-resign {
+  text-align: center;
+  max-width: 700px;
+  padding-top: 50px;
+  .full-width {
+    margin-bottom: 15px;
+    display: grid;
+    label {
+      text-align: left;
     }
+
+    input {
+      outline: none;
+      border-radius: 15px;
+      border: 1px solid #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    textarea {
+      outline: none;
+      border-radius: 15px;
+      border: 1px solid #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+.footer-button {
+  text-align: center;
+  width: 100%;
+  button {
+    font-size: 24px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: #ffb303;
+    color: #fff;
+  }
+}
+
+.info-contact {
+
+  .info {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  .no-copy {
+    background-color: #0973ac;
+    text-align: left;
+    padding: 20px 0;
+    color: #fff;
   }
 }
